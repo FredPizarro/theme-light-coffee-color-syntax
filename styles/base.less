@@ -10,7 +10,7 @@ atom-text-editor {
     background-color: @grey_100;
     color: @grey_800;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-family: 'SCP Medium', 'MS Gothic', monospace;
 
     .wrap-guide {
@@ -118,12 +118,12 @@ box-sizing: border-box;
       width: 2px;
     }
     .gutter .line-number.folded{
-      color: @grey_900;
-      font-family: 'Roboto Bold', sans-serif;
+      color: @grey_300;
+      // font-family: 'Roboto bold', sans-serif;
 
       .icon-right {
           position: absolute;
-          left: 12px;
+          left: 18px;
           z-index: 9999;
           border-radius: 50%;
           padding-left: 8px; padding-right: 6px;
@@ -488,14 +488,10 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
             &.syntax--pseudo-element {
               color: @yellow_A700;
               text-shadow:
-              0 0 1px #000000,
-              0 0 2px #000000,
-              0 0 3px #000000,
-              0 0 4px #000,
-              0 0 7px #000,
-              0 0 8px #000,
-              0 0 10px #000,
-              0 0 75px #000;
+                          0 0 1px #212121,
+                          0 1px 0 #757575,
+                          0 0 2px #212121,
+                          0 0 3px #424242;
             }
 
             &.syntax--attribute {
@@ -681,7 +677,8 @@ atom-text-editor {
   position: relative;
 }
 .bracket-matcher .region{
-  left: 0px; margin-left: -9px; top: 0; margin-top: -3px;
+  position: absolute;
+  left: 0px; margin-left: -8px; top: 0; margin-top: 2px;
   color: @grey_200!important;
   padding: 12px;
   font-size: 20px !important;
@@ -772,7 +769,7 @@ atom-text-editor {
 .list-item.project--header {
   /* barra de la carpeta, nombre del projecto */
   background: @grey_900;
-  color: @grey_100; font-size: 16px;
+  color: @grey_50; font-size: 16px;
   box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
   margin-left: -4px; margin-top: -1px;
   pointer-events: none;
@@ -796,7 +793,7 @@ atom-text-editor {
 
   .icon-repo{
     /* texto */
-    color: @grey_500;
+    color: @grey_400;
     text-shadow: @txt-shadown !important;
 
     &::before{
@@ -855,7 +852,6 @@ atom-text-editor {
      padding-left: 7px; padding-right: 8px;
      height: 17px !important;
      box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.18), 0 1px 9px 0 rgba(0, 0, 0, 0.15);
-
    }
 
     /* bolita */
@@ -870,6 +866,12 @@ atom-text-editor {
       border: 2px solid @grey_600;border-radius: 50%; opacity: 0.7;
       transition: .25s;
       box-shadow: @box-shadown;
+      content: "";
+    }
+    /* icon molesto del minimizar folder */
+    .list-nested-item > .list-item:active,
+    .list-nested-item > .list-item:target{
+      content: "" !important;
     }
 
 }
@@ -920,7 +922,7 @@ atom-text-editor {
     background-color: @grey_900 !important;
 
     *{
-      color: @grey_600 !important;
+      color: @grey_500 !important;
       text-shadow: @txt-shadown;
     }
 }
@@ -991,18 +993,19 @@ atom-text-editor {
 
 }
 
-
-// scrool
+// scrool, scrollbar
 .horizontal-scrollbar{
   background: @grey_900 !important;
-  width: 50px;
-  opacity: 0.3;
+  width: 100%; height: 10px !important;
+  opacity: 0.1;
   visibility: visible;
-  &:hover{ opacity: 1; }
+  // will-change: transform, opacity;
+  &:hover{ opacity: 0 !important; }
+
 }
 .vertical-scrollbar{
-  height: 50px;   opacity: 0.3;
-  &:hover{ opacity: 1; }
+  height: 100%;   opacity: 0.3;
+  &:hover{ opacity: 1 !important; }
 }
 
 // opacity
@@ -1060,16 +1063,19 @@ ul.list-inline.tab-bar.inset-panel{
       /**/
       transition: none;
       color: @grey_200;
-      border-bottom: 5px solid #00bfa5;
-      background: #009688;
+      border-bottom: 5px solid @teal_A700;
+      background: @teal_500;
       transition: box-shadow 0.25s;
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     }
+
   }
 
 }
 
+.tab[data-type$="Editor"]{
 
+}
 
 .syntax--directory.syntax--entry.list-nested-item.status-modified.selected.syntax--expanded{
   background: @teal_500 !important;

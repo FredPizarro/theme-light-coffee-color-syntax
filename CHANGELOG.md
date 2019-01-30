@@ -1,3 +1,11 @@
+## 0.0.2
+* fixed scroollbar in the tool panel and panel container of code
+* fixed color, icon active,selected,target in the tool panel
+* fixed text shadown in elements
+* fixed font size default 16px in the code
+* add color functions, delimiter in TypeScript
+* fixed color syntax in json and md
+
 ## 0.0.1
 * fixed color, shadown and effect button float in selected and in mode active.
 * fixed gutter space, color, selected

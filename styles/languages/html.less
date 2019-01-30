@@ -1,8 +1,10 @@
 .syntax--html {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
     .syntax--meta {
         &.syntax--tag {
             &.syntax--doctype {
                 color: @green_300;
+                text-shadow: none;
             }
 
         }
@@ -11,14 +13,16 @@
     .syntax--punctuation {
         &.syntax--tag {
             color: @green_300;
+            text-shadow: none;
         }
     }
 
     &.syntax--other.syntax--attribute-name {
         /* name attribute, class, ids en CSS */
-            color: @deep-orange_700;
+            color: @deep-orange_700 !important;
             font-family: "Roboto Regular", monospace;
             text-shadow: @txt-shadown;
     }
 
 }
+ 

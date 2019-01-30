@@ -1,3 +1,12 @@
 .syntax--json .syntax--meta .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted *{
   color: @teal_700;
 }
+
+.syntax--json .syntax--meta.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted .syntax--punctuation.syntax--string{
+  color: @teal_500;
+}
+
+.syntax--json .syntax--meta.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted{
+  font-family: 'SCP Bold', monospace;
+  color: @teal_500;
+}

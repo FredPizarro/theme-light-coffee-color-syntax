@@ -10,7 +10,8 @@
 
 .syntax--source.syntax--ts,
 .syntax--source.syntax--tsx  {
-  color: @red_A200; font-family: 'Roboto Medium', sans-serif !important;
+  // color: @red_A200; font-family: 'Roboto Medium', sans-serif !important;
+  color: @blue-grey_700; font-family: 'Roboto', sans-serif !important;
   // text-shadow: 0 1px 0px rgba(255, 255, 255, 0.2);
 
   .syntax--import-equals,
@@ -20,7 +21,9 @@
         &:hover{ background: @yellow_A700; transition:  0.25s;}
       }
   }
-
+  .syntax--source.syntax--ts.syntax--keyword{
+    color: @red_A200; font-family: 'Roboto Medium', sans-serif !important;
+  }
   .syntax--keyword.syntax--debugger {
      background-color: @lime_500;
    }
@@ -61,6 +64,7 @@
   font-family: 'Lobster', cursive;
   // font-size: 16px;
   text-shadow: none;
+  letter-spacing: 0.09em;
 }
 
 
@@ -74,8 +78,34 @@
   font-size: 16px;
 }
 
+.syntax--source.syntax--ts{
+  // font-size: 16px;
+  .syntax--entity.syntax--name.syntax--function{
+    /* function, log */
+    color: @deep-orange_600; font-family: 'SCP Medium', sans-serif !important;
+    border: none;
+    font-style: italic;
+    padding-right: 0.2em;
+    text-shadow: 0 0 1px @deep-orange_50,
+                 0 1px 0px @deep-orange_500,
+                 0 0 1px @grey_200,
+                 0 0 1px @grey_100;
+  }
+  .syntax--meta.syntax--delimiter.syntax--period{
+    /* puntos */
+    font-family: "SCP Black", monospace;
+    margin-right: -1px;
+  }
+
+  .syntax--keyword.syntax--operator{
+    text-shadow: none !important;
+    font-family: 'SCP Medium', sans-serif !important;
+  }
+
+}
+
 .syntax--entity.syntax--name.syntax--function.syntax--ts{
-  color: @grey_100; font-family: 'Roboto Light', sans-serif !important;
+  color: @grey_600; font-family: 'SCP Medium', sans-serif !important;
 }
 
 .syntax--string.syntax--quoted.syntax--single.syntax--ts{
@@ -109,14 +139,14 @@
 
 .syntax--meta.syntax--definition.syntax--property.syntax--ts{
   // variables
-  color: @grey_100;
+  color: @grey_600;
   font-family: 'Roboto Thin', sans-serif !important;
   // font-size: 13px;
   border-bottom: 1px solid @grey_700;
 }
 
 .syntax--variable.syntax--other.syntax--readwrite.syntax--ts{
-  color: @grey_100;
+  color: @grey_600;
   // text-shadow: @txt-shadown;
 }
 
@@ -190,7 +220,7 @@
 
 /*error TS detect*/
 .highlight-error{
-  color: @grey_100 !important;
+  color: @grey_600 !important;
   background: @red_A200 !important;
 }
 

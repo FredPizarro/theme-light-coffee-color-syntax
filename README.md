@@ -8,11 +8,29 @@
 # Images
 
 #### view in html
-![HTML](http://i.imgur.com/x5FQVGa.png)
+![HTML](http://i.imgur.com/jGJfBsO.png)
 #### view in CSS
-![CSS](http://i.imgur.com/kbGNdHd.png)
+![CSS](http://i.imgur.com/3qjSOxL.png)
 #### view in TypeScript
-![TS](http://i.imgur.com/JgTC87I.png)
+![TS](http://i.imgur.com/Rpzingu.png)
+
+=======
+# Recommended Extensions:
+```
+https://atom.io/packages/<name_extension>
+```
+### file-icons
+file-icons by Copyright (c) 2014. - file-icons
+### seti-icons
+seti-icons by Copyright © Neil Kistner neil.kistner@gmail.com (neilkistner.com)
+### minimap
+minmap by Copyright (c) 2015 Atom Minimap contributors
+### busy-signal, intentions, linter, linter-ui-default
+busy-signal by Copyright (c) 2016 steelbrain
+### platformio-ide-terminal
+platformio by Copyright (c) 2015 Jeremy Ebneyamin
+### teletype
+teletype by Copyright (c) 2017-2018 GitHub Inc. - atom
 
 =======
 # Contact
